@@ -22,7 +22,6 @@ def find_sum(matrix):
 
     return biggest_sum, submatrix
 
-
 sum, submatrix = find_sum(matrix)
 
 for row in submatrix:
