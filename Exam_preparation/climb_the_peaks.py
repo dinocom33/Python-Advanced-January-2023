@@ -12,7 +12,6 @@ peaks = {
 }
 
 conquered_peaks = []
-idx = 0
 
 for level, peak in peaks.items():
     while food_portions and stamina:
