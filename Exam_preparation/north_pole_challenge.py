@@ -1,4 +1,4 @@
-rows, columns  = [int(x) for x in input().split(", ")]
+rows, columns = [int(x) for x in input().split(", ")]
 
 workshop = []
 

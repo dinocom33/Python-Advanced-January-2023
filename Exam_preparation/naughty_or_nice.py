@@ -43,5 +43,3 @@ print(naughty_or_nice_list(
     "2-Nice",
     "1-Nice",
 ))
-
-

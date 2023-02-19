@@ -1,4 +1,4 @@
-def students_credits(*args):
+def students_credits(*args, credits_needed=240):
     credits_info = []
     total_credits = 0
     for course in args:
@@ -10,10 +10,10 @@ def students_credits(*args):
         total_credits += credits_gained
         credits_info.append((course_name, credits_gained))
     credits_info.sort(key=lambda x: x[1], reverse=True)
-    if total_credits >= 240:
-        message =  f"Diyan gets a diploma with {total_credits:.1f} credits."
+    if total_credits >= credits_needed:
+        message = f"Diyan gets a diploma with {total_credits:.1f} credits."
     else:
-        message =  f"Diyan needs {240 - total_credits:.1f} credits more for a diploma."
+        message = f"Diyan needs {credits_needed - total_credits:.1f} credits more for a diploma."
 
     result = message + "\n"
 

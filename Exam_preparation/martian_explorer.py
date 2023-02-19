@@ -1,6 +1,6 @@
 from collections import deque
 
-size = 6
+SIZE = 6
 
 matrix = []
 rover_position = []
@@ -15,7 +15,7 @@ directions = {
     "right": (0, 1),
 }
 
-for row in range(size):
+for row in range(SIZE):
     matrix.append(input().split())
 
     if "E" in matrix[row]:
@@ -27,16 +27,17 @@ while commands:
     curr_command = commands.popleft()
     curr_row = 0
     curr_col = 0
+
     if curr_command == "up" and rover_position[0] == 0:
-        curr_row = rover_position[0] + directions[curr_command][0] + 6
+        curr_row = rover_position[0] + directions[curr_command][0] + SIZE
         curr_col = rover_position[1] + directions[curr_command][1]
-    elif curr_command == "down" and rover_position[0] == size - 1:
+    elif curr_command == "down" and rover_position[0] == SIZE - 1:
         curr_row = 0
         curr_col = rover_position[1] + directions[curr_command][1]
     elif curr_command == "left" and rover_position[1] == 0:
         curr_row = rover_position[0] + directions[curr_command][0]
-        curr_col = rover_position[1] + directions[curr_command][1] + 6
-    elif curr_command == "right" and rover_position[1] == size - 1:
+        curr_col = rover_position[1] + directions[curr_command][1] + SIZE
+    elif curr_command == "right" and rover_position[1] == SIZE - 1:
         curr_row = rover_position[0] + directions[curr_command][0]
         curr_col = 0
     else:
